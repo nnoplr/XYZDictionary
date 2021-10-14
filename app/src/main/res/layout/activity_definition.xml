@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DefinitionActivity">
+
+    <TextView
+        android:id="@+id/tvNameOnDef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Word: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/def"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNameOnDef"
+        android:text="Definitions:"
+        android:textSize="24sp"
+        android:layout_marginLeft="10dp"/>
+    <View
+        android:id="@+id/garis"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/def"/>
+
+
+    <LinearLayout
+        android:id="@+id/ln"
+        android:layout_below="@+id/garis"
+        android:layout_above="@+id/btnSaveInDefActivity"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/rvDefinitionList"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveInDefActivity"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.ActionMenuView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+</RelativeLayout>
